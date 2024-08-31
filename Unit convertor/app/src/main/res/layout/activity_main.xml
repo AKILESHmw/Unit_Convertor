@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unit Convertor"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:fontFamily="@font/kanit_bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="250dp"
+        android:textSize="55dp"
+        />
+
+    <Button
+        android:id="@+id/Click_here"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="Click Here"
+        android:paddingEnd="10dp"
+        android:textColor="@color/white"
+        android:backgroundTint="#BF1616"
+        android:background="@drawable/button"
+        android:fontFamily="@font/kanit_bold"
+        android:drawableLeft="@drawable/ic_arrow"
+        />
+
+</RelativeLayout>

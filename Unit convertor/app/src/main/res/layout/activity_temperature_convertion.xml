@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".temperature_convertion">
+
+    <LinearLayout
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/k"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:fontFamily="@font/kanit_bold"
+                android:background="@drawable/left_curve_top"
+                android:textColor="@color/black"
+                android:layout_marginLeft="10dp"
+                android:text="00"
+                android:textSize="20dp"
+                android:paddingVertical="15dp"/>
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/right_curved_top"
+                android:gravity="center"
+                android:paddingVertical="15dp"
+                android:text="Kelvin"
+                android:fontFamily="@font/kanit_bold"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/c"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:background="@color/white"
+                android:textColor="@color/black"
+                android:text="00"
+                android:fontFamily="@font/kanit_bold"
+                android:layout_marginLeft="10dp"
+                android:textSize="20dp"
+                android:paddingVertical="15dp"/>
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:paddingVertical="15dp"
+                android:text="Celsius"
+                android:fontFamily="@font/kanit_bold"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/f"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:background="@drawable/left_curve_bottom"
+                android:text="00"
+                android:fontFamily="@font/kanit_bold"
+                android:textSize="20dp"
+                android:layout_marginLeft="10dp"
+                android:paddingVertical="15dp"/>
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/black"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/right_curved_bottom"
+                android:gravity="center"
+                android:paddingVertical="15dp"
+                android:text="Fahrenheit"
+                android:fontFamily="@font/kanit_bold"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/list"
+        android:gravity="center"
+        android:paddingVertical="50dp">
+
+        <EditText
+            android:id="@+id/input"
+            android:layout_width="210dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="71dp"
+            android:layout_marginEnd="71dp"
+            android:layout_marginBottom="193dp"
+            android:background="@drawable/edit_text"
+            android:hint="Enter the Value"
+            android:inputType="numberDecimal"
+            android:padding="10dp"
+            android:text=""
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="13dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:importantForAccessibility="yes"/>
+
+
+        <Button
+            android:id="@+id/Convert_it"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Convert it"
+            android:background="@drawable/button"
+            android:textColor="@color/white"
+            android:backgroundTint="#BF1616"
+            android:fontFamily="@font/kanit_bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/input" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
